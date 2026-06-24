@@ -424,6 +424,18 @@ body {
     padding-left: 32px; /* Menjorokkan teks p agar sejajar dengan huruf pertama judul, bukan di bawah emotikon */
 }
 
+.cert-item,
+.cert-info {
+    max-width: 100%; /* Memastikan elemen tidak melebihi lebar layar */
+    box-sizing: border-box; /* Menghitung padding ke dalam batas kotak */
+}
+
+.cert-title, 
+.cert-info p {
+    word-wrap: break-word; /* Memaksa kata yang terlalu panjang untuk turun ke bawah */
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
 /* =========================================
    DESAIN RESPONSIF (TAMPILAN DESKTOP) - DIPERBESAR
    ========================================= */
