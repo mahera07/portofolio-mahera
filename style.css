@@ -423,3 +423,59 @@ body {
     line-height: 1.4;
     padding-left: 32px; /* Menjorokkan teks p agar sejajar dengan huruf pertama judul, bukan di bawah emotikon */
 }
+
+/* =========================================
+   DESAIN RESPONSIF (TAMPILAN DESKTOP)
+   ========================================= */
+
+/* Kode di bawah ini HANYA akan aktif jika layar lebih lebar dari 768px (Tablet/Laptop) */
+@media screen and (min-width: 768px) {
+    
+    /* 1. Melebarkan wadah utama dan mengubahnya menjadi mode Grid 2 Kolom */
+    .container {
+        max-width: 800px; /* Jauh lebih lebar dari ukuran HP */
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Membagi wadah menjadi 2 bagian sama besar */
+        gap: 20px;
+    }
+
+    /* 2. Memaksa Kotak Profil dan Ikon Sosial untuk membentang penuh (mengisi 2 kolom) */
+    .profile-card, 
+    .social-container {
+        grid-column: span 2;
+    }
+
+    /* 3. Menyamakan tinggi kotak menu agar rapi saat berdampingan */
+    .link-card {
+        height: 100%;
+        min-height: 140px;
+    }
+
+    /* 4. Menjaga halaman isi (About, Skills, dll) tetap memanjang penuh di tengah */
+    .back-btn,
+    .about-card,
+    .skills-card,
+    .projects-card,
+    .cert-card {
+        grid-column: span 2;
+    }
+    
+    /* Penyesuaian posisi foto profil di desktop agar lebih proporsional */
+    .profile-card {
+        padding: 30px;
+    }
+    
+    .avatar {
+        width: 90px;
+        height: 90px;
+        margin-right: 25px;
+    }
+    
+    .profile-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .profile-text p {
+        font-size: 1rem;
+    }
+}
